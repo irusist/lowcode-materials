@@ -8,10 +8,14 @@ export default [
       props: {
         prefix: 'next-',
         format: 'YYYY-MM-DD',
-        size: 'medium',
+        size: 'large',
         hasClear: false,
         popupTriggerType: 'click',
         popupAlign: 'tl tl',
+        defaultValue: {
+          type : 'JSExpression',
+          value: 'new moment()'
+        },
         followTrigger: true,
       },
     },

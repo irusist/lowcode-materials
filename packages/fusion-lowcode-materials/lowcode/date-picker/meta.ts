@@ -153,6 +153,21 @@ export default {
       defaultValue: false,
     },
     {
+      name: 'showTime',
+      title: {
+        label: '是否使用时间控件',
+        tip: 'showTime|是否使用时间控件',
+      },
+      propType: 'bool',
+      description: 'showTime|是否使用时间控件',
+      defaultValue: false,
+    },
+    {
+      name: 'disabledDate',
+      propType: 'func',
+      description: '禁用日期函数\n@param 日期值: {MomentObject} \n@param {String} 当前视图类型，year: 年， month: 月, date: 日',
+    },
+    {
       name: 'className',
       propType: 'string',
     },
@@ -177,10 +192,10 @@ export default {
           name: 'rtl',
           condition: () => false,
         },
-        {
-          name: 'value',
-          condition: () => false,
-        },
+        // {
+        //   name: 'value',
+        //   condition: () => false,
+        // },
         {
           name: 'name',
           condition: () => false,
