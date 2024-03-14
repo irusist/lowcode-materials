@@ -309,7 +309,11 @@ export const proTableMeta: IComponentDescription = {
       isMinimalRenderUnit: true,
       nestingRule: {},
     },
-    supports: {},
+    supports: {
+      'events': [
+        'paginationProps.onChange',
+      ]
+    },
   },
   props: [],
   snippets: [
