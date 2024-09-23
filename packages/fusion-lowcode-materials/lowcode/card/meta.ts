@@ -70,6 +70,11 @@ module.exports = {
       defaultValue: 120,
     },
     {
+      name: "actions",
+      description: "卡片操作组，位置在卡片底部",
+      propType: 'node',
+    },
+    {
       name: 'className',
       propType: 'string',
     },
