@@ -406,7 +406,7 @@ const Filter: React.FC<FilterProps> = ({
     </Grid>
   );
 
-  return <Form {...others}>{content}</Form>;
+  return <Form {...others.formProps}>{content}</Form>;
 };
 
 Filter.defaultProps = {
