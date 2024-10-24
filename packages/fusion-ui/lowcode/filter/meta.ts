@@ -35,6 +35,41 @@ const operationConfig = {
   },
 };
 
+const formProps = {
+  name: 'formProps',
+  display: 'accordion',
+  title: '表单属性',
+  setter: {
+    componentName: 'ObjectSetter',
+    props: {
+      config: {
+        items: [
+          {
+            name: 'field',
+            title: {
+              label: {
+                type: 'i18n',
+                zh_CN: 'Field 实例',
+                en_US: 'Field',
+              },
+              tip: {
+                type: 'i18n',
+                zh_CN: '属性: field | 说明: 传入 Field 实例',
+                en_US: 'prop: field | description: field instance',
+              },
+              docUrl:
+                'https://fusion.alibaba-inc.com/pc/component/basic/form#%E5%A4%8D%E6%9D%82%E5%8A%9F%E8%83%BD(Field)',
+            },
+            setter: {
+              componentName: 'ExpressionSetter',
+            },
+          },
+        ],
+      },
+    },
+  },
+};
+
 const FilterMeta: ComponentMetadata = {
   componentName: 'Filter',
   title: '查询筛选',
@@ -256,6 +291,7 @@ const FilterMeta: ComponentMetadata = {
         ],
       },
       formItemsProps,
+      formProps,
       operationConfig,
       operations,
     ],
