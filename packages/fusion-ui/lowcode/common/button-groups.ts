@@ -129,7 +129,7 @@ export const buttonGroupConfigureProp: IProps = {
             setter: 'BoolSetter',
           },
           {
-            name: 'visibleButtonCount',
+            name: 'maxCount',
             title: {
               label: '可见数量',
               tip: '超过会收起到”更多“菜单中',

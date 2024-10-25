@@ -372,7 +372,7 @@ export const proTableMeta: IComponentDescription = {
                 children: '操作二',
               },
             ],
-            visibleButtonCount: 3,
+            maxCount: 3,
           },
           paginationProps: {
             pageSize: 20,

@@ -87,6 +87,12 @@ export const columnsField: IProps = {
                 setter: 'StringSetter',
               },
               {
+                name: 'cell',
+                title: '行渲染的逻辑',
+                display: 'inline',
+                setter: 'FunctionSetter',
+              },
+              {
                 name: 'align',
                 title: '对齐方式',
                 display: 'inline',
@@ -194,16 +200,17 @@ export const columnsField: IProps = {
                 setter: {
                   componentName: 'NumberSetter',
                   props: {
-                    units: [
-                      {
-                        type: 'px',
-                        list: true,
-                      },
-                      {
-                        type: '%',
-                        list: true,
-                      },
-                    ],
+                    // units: [
+                    //   {
+                    //     type: 'px',
+                    //     list: true,
+                    //   },
+                    //   {
+                    //     type: '%',
+                    //     list: true,
+                    //   },
+                    // ],
+                    units: 'px',
                   },
                 },
               },

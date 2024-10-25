@@ -28,6 +28,15 @@ export const globalStyleField = {
       defaultValue: false,
       setter: 'BoolSetter',
     },
+    {
+      name: 'maxBodyHeight',
+      title: '最大内容高度',
+      display: 'inline',
+      // condition: (target) => {
+      //   return target.getProps().getPropValue('fixedHeader') === true;
+      // },
+      setter: 'NumberSetter',
+    },
 
     {
       name: 'size',
