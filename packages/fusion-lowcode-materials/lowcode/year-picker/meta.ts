@@ -1,6 +1,6 @@
 module.exports = {
   group: '原子组件',
-  componentName: 'YearPicker',
+  componentName: 'YearPicker2',
   title: 'YearPicker',
   docUrl: '',
   screenshot: '',
@@ -213,5 +213,168 @@ module.exports = {
       propType: 'object',
     },
   ],
-  category: '基础',
+  configure: {
+    props: [
+        {
+          name: 'prefix',
+          condition: () => false,
+        },
+        {
+          name: 'rtl',
+          condition: () => false,
+        },
+        // {
+        //   name: 'value',
+        //   condition: () => false,
+        // },
+        {
+          name: 'name',
+          condition: () => false,
+        },
+        // {
+        //   name: 'defaultValue',
+        //   title: {
+        //     label: '默认值',
+        //     tip: 'defaultValue|初始日期值，moment 对象',
+        //   },
+        //   setter: 'DateSetter',
+        //   supportVariable: true,
+        // },
+        {
+          name: 'format',
+          title: {
+            label: '格式',
+            tip: 'format|日期值的格式（用于限定用户输入和展示）',
+          },
+          setter: 'StringSetter',
+          description: 'format|日期值的格式（用于限定用户输入和展示）',
+          defaultValue: 'YYYY',
+        },
+        {
+          name: 'placeholder',
+          title: {
+            label: '输入提示',
+            tip: 'placeholder|输入提示',
+          },
+          setter: 'StringSetter',
+          description: 'placeholder|输入提示',
+          defaultValue: '请输入年份',
+        },
+        {
+          name: 'size',
+          title: '尺寸',
+          setter: {
+            componentName: 'RadioGroupSetter',
+            props: {
+              options: [
+                {
+                  label: '小',
+                  value: 'small',
+                },
+                {
+                  label: '中',
+                  value: 'medium',
+                },
+                {
+                  label: '大',
+                  value: 'large',
+                },
+              ],
+            },
+          },
+          description: '输入框尺寸',
+          defaultValue: 'medium',
+        },
+        {
+          name: 'disabled',
+          setter: 'BoolSetter',
+          supportVariable: true,
+          title: '是否禁用',
+        },
+        {
+          name: 'hasClear',
+          setter: 'BoolSetter',
+          supportVariable: true,
+          title: '清空按钮',
+          defaultValue: true,
+        },
+        {
+          name: 'followTrigger',
+          setter: 'BoolSetter',
+          supportVariable: true,
+          title: '是否跟随滚动',
+          defaultValue: false,
+        },
+        {
+          name: 'popupTriggerType',
+          title: '弹层触发方式',
+          setter: {
+            componentName: 'RadioGroupSetter',
+            props: {
+              options: [
+                {
+                  label: 'click',
+                  value: 'click',
+                },
+                {
+                  label: 'hover',
+                  value: 'hover',
+                },
+              ],
+            },
+          },
+          description: '弹层触发方式',
+          defaultValue: 'click',
+        },
+        {
+          name: 'popupAlign',
+          setter: 'StringSetter',
+          supportVariable: true,
+          title: '弹层对齐方式',
+        },
+        {
+          name: 'form',
+          type: 'group',
+          title: '高级',
+          display: 'block',
+          items: [
+            {
+              name: 'id',
+              title: {
+                label: {
+                  type: 'i18n',
+                  zh_CN: '唯一标识',
+                  en_US: 'ID',
+                },
+                tip: {
+                  type: 'i18n',
+                  zh_CN: '属性: id | 说明: 唯一标识',
+                  en_US: 'prop: id | description: switch id',
+                },
+              },
+              setter: 'StringSetter',
+              supportVariable: true,
+            },
+            {
+              name: 'name',
+              title: {
+                label: {
+                  type: 'i18n',
+                  zh_CN: '表单标识',
+                  en_US: 'Name',
+                },
+                tip: {
+                  type: 'i18n',
+                  zh_CN: '属性: name | 说明: 表单标识',
+                  en_US: 'prop: name | description: switch name',
+                },
+              },
+              setter: 'StringSetter',
+              supportVariable: true,
+            },
+          ],
+        },
+      ],
+  },
+  category: '信息输入',
 };
