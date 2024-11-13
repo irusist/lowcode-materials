@@ -31,17 +31,17 @@ const SelectNumber : React.FC<SelectNumberProps> = function SelectNumber({
   
     const handleSelectChange = (val : any) => {
       setSelectValue(val);
-      onChange(`${val || ''}${numberValue || ''}`);
+      onChange && onChange(`${val || ''}${numberValue || ''}`);
     };
   
     const handleNumberChange = (val : any) => {
       setNumberValue(val);
-      onChange(`${selectValue || ''}${val || ''}`);
+      onChange && onChange(`${selectValue || ''}${val || ''}`);
     };
   
     return (<>
-        <Select {...selectProps} value={selectValue} onChange={handleSelectChange} ></Select>
-       <NumberPicker {...numberProps} value={numberValue} onChange={handleNumberChange}></NumberPicker>
+        <Select {...selectProps} value={selectValue} onChange={handleSelectChange} />
+       <NumberPicker {...numberProps} value={numberValue} onChange={handleNumberChange} />
         </>);
 }
 
