@@ -26,6 +26,10 @@ export { default as StoryPlaceholder } from './components/story-placeholder';
 export type {SelectNumberProps} from './components/select-number';
 export {default as SelectNumber} from './components/select-number';
 
+export type {ProTreeProps}  from './components/pro-tree';
+export {default as ProTree} from './components/pro-tree';
+
+
 export * from './variables';
 
 const bizCssPrefix = 'fusion-ui';
