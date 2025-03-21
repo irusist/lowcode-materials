@@ -37,6 +37,8 @@ export const usePayloadButtons = <Payload = unknown>(
       buttons
         .filter((vo) =>
           is.nullOrUndefined(vo.hidden) ? true : !isPayloadButtonTruth(vo.hidden, payload),
+        ).filter((vo) => 
+          is.nullOrUndefined(vo.perm) || is.nullOrUndefined(vo.hasPerm) || vo.hasPerm(vo.perm)
         )
         .map((vo) => ({
           ...vo,

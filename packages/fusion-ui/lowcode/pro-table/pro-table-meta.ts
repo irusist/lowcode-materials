@@ -347,15 +347,27 @@ export const proTableMeta: IComponentDescription = {
               {
                 children: '查看',
                 type: 'primary',
+                hasPerm: {
+                  type: "JSFunction",
+                  value: "function(){return this.utils.hasButtonPerm.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
+                },
               },
               {
                 children: '编辑',
                 type: 'primary',
+                hasPerm: {
+                  type: "JSFunction",
+                  value: "function(){return this.utils.hasButtonPerm.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
+                },
                 disabled: true,
               },
               {
                 children: '删除',
                 type: 'primary',
+                hasPerm: {
+                  type: "JSFunction",
+                  value: "function(){return this.utils.hasButtonPerm.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
+                },
               },
             ],
             text: true,
@@ -366,10 +378,18 @@ export const proTableMeta: IComponentDescription = {
               {
                 type: 'primary',
                 children: '操作一',
+                hasPerm: {
+                  type: "JSFunction",
+                  value: "function(){return this.utils.hasButtonPerm.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
+                },
               },
               {
                 type: 'normal',
                 children: '操作二',
+                hasPerm: {
+                  type: "JSFunction",
+                  value: "function(){return this.utils.hasButtonPerm.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
+                },
               },
             ],
             maxCount: 3,

@@ -107,6 +107,13 @@ module.exports = {
       defaultValue: false,
     },
     {
+      name: 'html',
+      title: '是否html',
+      propType: 'bool',
+      description: '添加代码样式',
+      defaultValue: false,
+    },
+    {
       name: 'delete',
       title: '删除线',
       propType: 'bool',

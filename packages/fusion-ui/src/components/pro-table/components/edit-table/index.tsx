@@ -138,6 +138,7 @@ export const EditTable = function (props: EditTableProps) {
         className="fusion-ui-edit-table"
         tableAfter={tableAfter}
         dataSource={dataSource}
+        primaryKey={primaryKey}
         actionColumnButtons={actionColumnButtons}
         {...otherProps}
       />

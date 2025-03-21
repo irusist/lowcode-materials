@@ -8,6 +8,7 @@ import NextText from './components/next-text';
 import NoteWrapper from './components/note-wrapper';
 import NextTable from './components/next-table';
 import Div from './components/div';
+import NextP from './components/nextp'
 
 export {
   Affix,
@@ -71,4 +72,12 @@ export {
   DatePicker2,
 } from '@alifd/next';
 
-export { Link, Image, Video, RichText, NextText, NoteWrapper, Calendar, Balloon, NextTable, Div };
+export { Link, Image, Video, RichText, NextText, NoteWrapper, Calendar, Balloon, NextTable, Div, NextP};
+
+export  {default as IconSelect} from './components/icon-select';
+export type {IconSelectorProps} from './components/icon-select';
+
+export  {default as Editor} from './components/editor';
+export type {EditorProps} from './components/editor';
+
+export {default as ProIcon} from './components/pro-icon';

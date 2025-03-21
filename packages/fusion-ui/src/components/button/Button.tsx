@@ -9,6 +9,12 @@ export interface ButtonProps extends NextButtonProps {
    */
   badgeProps?: BadgeProps;
   tooltipProps?: TooltipProps;
+  /**
+   * 权限
+   */
+  perm : string;
+
+  hasPerm : (perm: string) => boolean;
 }
 
 export interface TooltipProps {
@@ -76,7 +82,7 @@ export class Button extends React.Component<ButtonProps, ButtonState> {
 
   render() {
     const { showTooltip, tooltipMessage, triggerType } = this.state;
-    const { badgeProps, id, ...otherProps } = this.props;
+    const { perm, hasPerm, badgeProps, id, ...otherProps } = this.props;
     const buttonComp = <NextButton {...otherProps} />;
     let finalComp = buttonComp;
     if (badgeProps) {
@@ -91,6 +97,9 @@ export class Button extends React.Component<ButtonProps, ButtonState> {
       );
     }
 
+    if (perm && hasPerm && !hasPerm(perm)) {
+      return null;
+    }
     return <div id={id}>{finalComp}</div>;
   }
 }

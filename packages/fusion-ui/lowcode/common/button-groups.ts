@@ -107,6 +107,22 @@ export const buttonConfigureProps: IProps[] = [
     title: '点击事件',
     setter: 'FunctionSetter',
   },
+  {
+    name: 'hasPerm',
+    title: '是否有权限',
+    setter: 'FunctionSetter',
+    condition: hideProp,
+    defaultValue: {
+      type: "JSFunction",
+      value: "function(){return this.utils.hasButtonPerm.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
+    },
+  },
+  {
+    name: 'perm',
+    title: '权限',
+    display: 'inline',
+    setter: 'StringSetter',
+  },
 ];
 export const buttonGroupConfigureProp: IProps = {
   type: 'field',
@@ -165,6 +181,10 @@ export const buttonGroupConfigureProp: IProps = {
                   initialValue: () => ({
                     children: '操作',
                     type: 'normal',
+                    hasPerm: {
+                      type: "JSFunction",
+                      value: "function(){return this.utils.hasButtonPerm.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
+                    },
                   }),
                 },
               },

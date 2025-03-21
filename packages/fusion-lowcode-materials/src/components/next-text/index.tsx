@@ -98,6 +98,8 @@ interface TextProps {
    * 添加代码样式
    */
   code?: boolean;
+
+  html?: boolean;
   /**
    * 设置标签类型
    */
@@ -118,6 +120,7 @@ const Text: React.FC<TextProps> = (props, ref) => {
     underline,
     delete: deleteProp,
     code,
+    html,
     mark,
     ...others
   } = props;
@@ -157,7 +160,14 @@ const Text: React.FC<TextProps> = (props, ref) => {
   }
 
   if (code) {
-    children = <code>{children}</code>;
+    if (html) {
+      children = <code
+        className="hljs"
+        dangerouslySetInnerHTML={{ __html: children }}
+      ></code>
+    } else {
+      children = <code>{children}</code>;
+    }
   }
 
   if (mark) {
